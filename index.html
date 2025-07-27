@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Saima Staples</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+    
+</head>
+
+<div class="header">
+  <div class="logo1">Manufacturer of Heavy Duty Staples</div>
+  <div class="logo2">
+    <ul class="social-links">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+    <div class="top-right">
+      <ul class="info-list">
+        <li><a href="#"><i class="icon fa fa-phone"></i><span class="txt"> +91 9922146662/63</span></a></li>
+        <li><a href="#"><i class="icon fa fa-envelope-open"></i><span class="txt"> sales@venkateshwire.in</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION SECTION -->
+<nav class="navbar">
+  <div class="logo-section">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Saima Logo"/>
+      <span class="brand-name">SAIMA STAPLES</span>
+    </a>
+  </div>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links" id="navMenu">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./aboutus.html">About Us</a></li>
+    <li class="dropdown">
+      <a href="./product.html">Products</a>
+      <ul class="dropdown-menu">
+        <li><a href="./product10.html">No. 10</a></li>
+        <li><a href="./product23.html">No. 23 Series</a></li>
+        <li><a href="./product24.html">No. 24/6</a></li>
+        <li><a href="./product80.html">No. 80 Series</a></li>
+        <li><a href="./product100.html">No. 100 Series</a></li>
+      </ul>
+    </li>
+    <li><a href="./contact.html">Contact</a></li>
+    <li class="btn-box">
+      <a href="./contact.html" class="btn-style-one">Contact Now</a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+  }
+</script>
+
+    <!-- Image with tagline -->
+    <main>
+      <p class="tagline">Precision Staples, Made in India. </p>
+      <p class="tagline1">Trusted Worldwide</p>
+    </main>
+
+
+<!-- PRODUCTS -->
+      <div class="scroll-wrapper">
+        <div class="heading-row">
+          <div class="headings">
+            <h6>We serve</h6>
+            <h4>Our Products</h4>
+          </div>
+          <div class="text">
+            <p>SAIMA offers a wide range of staples for both industry as well as office use. 
+              Our products are developed under strict supervision of over 100 technorates and highly 
+              skilled people.</p>
+          </div>
+        </div>
+
+
+      <div class="products" id="prod">
+        <button class="scroll-btn left" onclick="scrollProducts(-1)">&#10094;</button>
+        <div class="product-scroll-container" id="productContainer">
+      <ul class="images" id="track">
+     <li> <div class="image-swap">
+        <img src="./images/No.10Front.JPG" alt="Stapler" class="default-img">
+        <img src="./images/No.10Back.JPG" alt="Stapler Hover" class="hover-img">
+       
+      </div>
+      <h5>No. 10</h5>
+      <div class="text-container">
+      <p>Ideal for everyday office stapling.handles upto 20 sheets.</p>
+        <div class="btn">
+          <a href="./product10.html" class="theme-btn btn-style-one">Read More</a>
+      </div>
+      </div>
+      </li>
+      </a>
+
+      <li> <div class="image-swap">
+        <img src="./images/No.23Front.JPG" alt="Stapler" class="default-img">
+        <img src="./images/No.23Back.JPG" alt="Stapler Hover" class="hover-img">
+      </div>
+      <h5>No. 23 Series</h5>
+      <div class="text-container">
+      <p>Heavy-duty stapling for thick documents, furniture, cartons etc.</p>
+        <div class="btn">
+          <a href="./product23.html" class="theme-btn btn-style-one">Read More</a>
+      </div>
+      </div>
+      </li>
+
+      <li> <div class="image-swap">
+        <img src="./images/24:6Front.JPG" alt="Stapler" class="default-img">
+        <img src="./images/24:6fBack.JPG" alt="Stapler Hover" class="hover-img">
+      </div> 
+      <h5>No. 24/6</h5>
+      <div class="text-container">
+      <p>Perfect for medium-duty use, handles up to 40 sheets. </p>
+        <div class="btn">
+          <a href="./product24.html" class="theme-btn btn-style-one">Read More</a>
+      </div>
+      </div>
+      </li>
+
+      <li> <div class="image-swap">
+        <img src="./images//No.80Front.JPG" alt="Stapler" class="default-img">
+        <img src="./images/No.80Back.JPG" alt="Stapler Hover" class="hover-img">
+       
+      </div>
+      <h5>No. 80 Series</h5>
+      <div class="text-container">
+      <p>Designed for upholstery, interiors, woodwork applications etc.</p>
+        <div class="btn">
+          <a href="./product80.html" class="theme-btn btn-style-one">Read More</a>
+      </div>
+      </div>
+      </li>
+
+      <li><div class="image-swap">
+        <img src="./images/No.100Front.JPG" alt="Stapler" class="default-img">
+        <img src="./images/No.100Back.JPG" alt="Stapler Hover" class="hover-img">
+       
+      </div>
+      <h5>No. 100 Series</h5>
+      <div class="text-container">
+      <p>Built for strength – reliable stapling in  heavy-duty jobs.</p>
+        <div class="btn">
+          <a href="/product100.html" class="theme-btn btn-style-one">Read More</a>
+      </div>
+      </div>
+      </li>
+
+    </ul>
+    </div>
+      <button class="scroll-btn right" onclick="scrollProducts(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <script>
+      const track = document.getElementById("track");
+      const originals = Array.from(track.children);
+      function getPerPage() {
+      if (window.innerWidth < 768) return 1;
+      if (window.innerWidth < 1024) return 2;
+      return 3;
+    }
+    let perPage = getPerPage();
+
+      window.addEventListener("resize", () => {
+    perPage = getPerPage();
+  });
+      
+    
+      originals.slice(-perPage).forEach(el => track.prepend(el.cloneNode(true)));
+      originals.slice(0, perPage).forEach(el => track.append(el.cloneNode(true)));
+    
+      let currentIndex = perPage;
+      const itemWidth = track.children[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+    
+      function scrollProducts(direction) {
+        currentIndex += direction * perPage;
+        track.style.transition = "transform 0.5s";
+        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+      }
+    
+      track.addEventListener("transitionend", () => {
+        const total = track.children.length;
+        const realCount = originals.length;
+    
+        if (currentIndex >= realCount + perPage) {
+          track.style.transition = "none";
+          currentIndex = perPage;
+          track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+        } else if (currentIndex < perPage) {
+          track.style.transition = "none";
+          currentIndex = realCount;
+          track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+        }
+      });
+    </script>
+    
+  <!-- SERVICES SECTION -->
+  <section class="services-section">
+    <div class="sec-title centered pt-5">
+      <h2>Industries Served</h2>
+    </div>
+  
+    <div class="auto-container">
+      <div class="row clearfix">
+        <!-- ALL 6 service blocks inside one row -->
+        <div class="services-block">
+          <div class="inner-box">
+            <div class="icon-box">
+              <img src="./images/furniture.jpg" alt="Furniture">
+            </div>
+            <h3>Furniture</h3>
+            <a href="#" class="arrow">›</a>
+          </div>
+        </div>
+  
+        <div class="services-block">
+          <div class="inner-box">
+            <div class="icon-box">
+              <img src="./images/office.jpg" alt="Office Use">
+            </div>
+            <h3>Office Use</h3>
+            <a href="#" class="arrow">›</a>
+          </div>
+        </div>
+  
+        <div class="services-block">
+          <div class="inner-box">
+            <div class="icon-box">
+              <img src="./images/packaging.jpg" alt="Packaging">
+            </div>
+            <h3>Packaging</h3>
+            <a href="#" class="arrow">›</a>
+          </div>
+        </div>
+  
+        <div class="services-block">
+          <div class="inner-box">
+            <div class="icon-box">
+              <img src="./images/Cushioning.jpg" alt="Cushioning">
+            </div>
+            <h3>Cushioning</h3>
+            <a href="#" class="arrow">›</a>
+          </div>
+        </div>
+  
+        <div class="services-block">
+          <div class="inner-box">
+            <div class="icon-box">
+              <img src="./images/pallet.jpg" alt="Pallet Manufacturing">
+            </div>
+            <h3>Pallet Manufacturing</h3>
+            <a href="#" class="arrow">›</a>
+          </div>
+        </div>
+  
+        <div class="services-block">
+          <div class="inner-box">
+            <div class="icon-box">
+              <img src="./images/interior.jpg" alt="Interior Design and Home">
+            </div>
+            <h3>Interior Design and Home</h3>
+            <a href="#" class="arrow">›</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+      <!-- Company Description -->
+       <div class="image-text-container">
+        <img src="./images/company.jpg" alt="Side Image">
+        <div class="text-content">
+          <h3>About Industry</h3>
+          <p>Venkatesh Industries is one of the renowned manufacturing industries.Established 
+            in 2010 we are specialized in the procurement of CO2 MIG welding wire. In our pursuit 
+            of excellence and specialization, we launched our dedicated brand Saima Staples in 
+            2022 focused exclusively on manufacturing high-performance industrial and office 
+            staple pins. Each staple is manufactured using premium raw materials and undergoes 
+            rigorous quality checks to ensure flawless performance.
+          </p>
+        </div>
+      </div>
+    
+      <footer>
+        <div class="footer-container">
+          
+          <!-- Logo Section -->
+          <a href="./index.html" > <div class="footer-logo-box">
+           <img src="./images/logo.png" alt="SAIMA logo" class="footer-logo">
+            <span class="footer-heading">SAIMA STAPLES</span>
+          </div>
+        </a>
+      
+          <!-- Info Section -->
+          <div class="footer-info">
+            <p>"Saima staples is one of the leading manufacturers of a wide range of high quality office and industrial staple pins."</p>
+          </div>
+      
+          <!-- Contact Section -->
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><a href="#" ><i class="fa fa-phone"></i>+91 9922146662/63</p></a>
+            <p><a href="https://maps.app.goo.gl/cYLKLdZpnaomPAxD9" ><i class="fa fa-map-marker-alt"></i> Shivane, Maharashtra, Pune-411023</p></a>
+            <p><a href="#" ><i class="fa fa-envelope"></i> sales@venkateshwire.in</p></a>
+          </div>
+      
+        </div>
+      </footer>
+
+      <script>
+  // Reusable observer function
+  function observeOnScroll(selector, className = 'visible', threshold = 0.3) {
+    const elements = document.querySelectorAll(selector);
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(className);
+            // Optional: unobserve after triggering once
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: threshold }
+    );
+
+    elements.forEach(el => observer.observe(el));
+  }
+
+  // Call for each section you want to animate
+  observeOnScroll('.headings');
+  observeOnScroll('main'); // if you're animating <main>
+  observeOnScroll('.text-container'); // reuse as needed
+  observeOnScroll('.services-block');
+  observeOnScroll('.sec-title');
+  observeOnScroll('.image-text-container');
+
+</script>
+
+        
+</body>
+</html>
