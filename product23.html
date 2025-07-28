@@ -308,100 +308,30 @@ function moveSlide(dir) {
     </aside>
 
   </div>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.sidebar');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.13 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.image-grid');
+    function observeAndAnimate(selector, threshold = 0.2) {
+  const target = document.querySelector(selector);
+  if (!target) return;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.09 });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold });
 
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
+  observer.observe(target);
+}
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.section-title');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.4 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.feature-box');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.product-table');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.37 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  observeAndAnimate('.sidebar', 0.13);
+  observeAndAnimate('.image-grid', 0.09);
+  observeAndAnimate('.section-title', 0.4);
+  observeAndAnimate('.feature-box', 0.3);
+  observeAndAnimate('.product-table', 0.37);
+});
 </script>
 
   <footer>

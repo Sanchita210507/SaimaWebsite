@@ -343,7 +343,7 @@
      opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-in-out;
-  transition-delay: 0.8s;
+  transition-delay: 0.5s;
   }
   .feature-box.visible {
   opacity: 1;
@@ -387,7 +387,7 @@
       background-color: #f8f9fa;
       opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
   
   }
   .products-section.visible {

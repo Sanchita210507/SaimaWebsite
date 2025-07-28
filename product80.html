@@ -106,24 +106,9 @@
    </div>
   </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const boxes = document.querySelectorAll('.info-box');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.3 });
-
-    boxes.forEach(box => observer.observe(box));
-  });
-</script>
-
-
       <div class="carousel-container">
   <button class="nav prev" onclick="moveSlide(-1)">❮</button>
+
   <div class="carousel-track">
     <!-- Slide 1 -->
     <div class="carousel-slide zoomable">
@@ -188,6 +173,7 @@
     </table>
   </div>
 </div>
+
  <!-- Slide 5-->
      <div class="carousel-slide zoomable">
       <img src="./images/PNo.80-16.JPG" alt="80-16">
@@ -208,6 +194,7 @@
   </div>
   <button class="nav next" onclick="moveSlide(1)">❯</button>
 </div>
+
 <script>
     let current = 0;
 const track = document.querySelector('.carousel-track');
@@ -223,25 +210,7 @@ function moveSlide(dir) {
 }
 
 </script>
-      <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.carousel-container');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-  
+      
       
     </main>
 
@@ -261,101 +230,7 @@ function moveSlide(dir) {
     </aside>
 
   </div>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.sidebar');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.13 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.image-grid');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.09 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.section-title');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.4 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.feature-box');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.product-table');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.37 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
+   
 
   <footer>
     <div class="footer-container">
@@ -385,29 +260,34 @@ function moveSlide(dir) {
   </footer>
 
   <script>
-  // Reusable observer function
-  function observeOnScroll(selector, className = 'visible', threshold = 0.3) {
-    const elements = document.querySelectorAll(selector);
+    function observeAndAnimate(selector, threshold = 0.2) {
+  const target = document.querySelector(selector);
+  if (!target) return;
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(className);
-            // Optional: unobserve after triggering once
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: threshold }
-    );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold });
 
-    elements.forEach(el => observer.observe(el));
-  }
-  // Call for each section you want to animate
-  observeOnScroll('.main1'); 
+  observer.observe(target);
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+observeAndAnimate('.carousel-container');
+  observeAndAnimate('.sidebar', 0.13);
+  observeAndAnimate('.image-grid', 0.09);
+  observeAndAnimate('.section-title', 0.4);
+  observeAndAnimate('.feature-box', 0.3);
+  observeAndAnimate('.product-table', 0.37);
+  observeAndAnimate('.main1');
+});
 </script>
+
+
 
 <div id="zoomModal" class="zoom-modal">
   <span class="zoom-close" onclick="closeZoom()">&times;</span>

@@ -343,25 +343,20 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add(className);
-            // Optional: unobserve after triggering once
             observer.unobserve(entry.target);
           }
         });
       },
       { threshold: threshold }
     );
-
     elements.forEach(el => observer.observe(el));
   }
-
-  // Call for each section you want to animate
   observeOnScroll('.headings');
-  observeOnScroll('main'); // if you're animating <main>
-  observeOnScroll('.text-container'); // reuse as needed
+  observeOnScroll('main'); 
+  observeOnScroll('.text-container'); 
   observeOnScroll('.services-block');
   observeOnScroll('.sec-title');
   observeOnScroll('.image-text-container');
-
 </script>
 
         
