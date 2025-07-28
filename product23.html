@@ -95,21 +95,6 @@
   </p>
       </section>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const boxes = document.querySelectorAll('.info-box');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.3 });
-
-    boxes.forEach(box => observer.observe(box));
-  });
-</script>
-
 
       <div class="carousel-container">
   <button class="nav prev" onclick="moveSlide(-1)">❮</button>
@@ -255,6 +240,7 @@
   </div>
   <button class="nav next" onclick="moveSlide(1)">❯</button>
 </div>
+
 <script>
     let current = 0;
 const track = document.querySelector('.carousel-track');
@@ -270,25 +256,6 @@ function moveSlide(dir) {
 }
 
 </script>
-      <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.carousel-container');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (carousel) {
-      observer.observe(carousel);
-    }
-  });
-</script>
-  
       
     </main>
 
@@ -326,11 +293,15 @@ function moveSlide(dir) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  observeAndAnimate('.carousel-container', 0.3)
   observeAndAnimate('.sidebar', 0.13);
   observeAndAnimate('.image-grid', 0.09);
   observeAndAnimate('.section-title', 0.4);
   observeAndAnimate('.feature-box', 0.3);
   observeAndAnimate('.product-table', 0.37);
+  observeAndAnimate('.main1', 0.3);
+  observeAndAnimate('.info-box', 0.3);
+
 });
 </script>
 
@@ -361,30 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </footer>
 
-  <script>
-  // Reusable observer function
-  function observeOnScroll(selector, className = 'visible', threshold = 0.3) {
-    const elements = document.querySelectorAll(selector);
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(className);
-            // Optional: unobserve after triggering once
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: threshold }
-    );
-
-    elements.forEach(el => observer.observe(el));
-  }
-  // Call for each section you want to animate
-  observeOnScroll('.main1'); 
-
-</script>
 
 <div id="zoomModal" class="zoom-modal">
   <span class="zoom-close" onclick="closeZoom()">&times;</span>
